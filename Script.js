@@ -1,5 +1,5 @@
 var Main = {};
-
+// JavaScript Constructor which defines the object`s attributes
 Main.Player = function(firstName, lastName, num, battingAvg)
 {
 	this.FirstName = firstName;
@@ -14,6 +14,7 @@ Main.Player = function(firstName, lastName, num, battingAvg)
 	
 	
 }
+//The JavaScript Prototype property used to define and invoke the SetFirstName function
 Main.Player.prototype.SetFirstName = function(name)
 {
 	this.FirstName = name;
@@ -30,7 +31,7 @@ Main.Santana = new Main.Player("Carlos", "Santana", 41, ".259");
 Main.Lindor = new Main.Player("Francisco", "Lindor", 12, ".301");
 
 
-
+//Changes Francisco to BigBoy
 Main.Lindor.SetFirstName("BigBoy");
 document.getElementById("lineup1").innerHTML = "Now batting " + "#" + Main.Lindor.Num + " " + Main.Lindor.GetFullName() + "....Batting Average is " + Main.Lindor.BattingAvg;
 
